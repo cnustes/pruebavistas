@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Management PLAN</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+    <script src="bootstrap/js/jquery-2.2.4.min.js"></script>
+    <link media="all" type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- font Awesome -->
+    <link media="all" type="text/css" rel="stylesheet" href="bootstrap/css/font-awesome-4.6.3/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link media="all" type="text/css" rel="stylesheet" href="bootstrap/css/ionicons.min.css">
+    <!-- Morris chart -->
+    <link media="all" type="text/css" rel="stylesheet" href="bootstrap/css/morris.css">
+    <!-- jvectormap -->
+    <link media="all" type="text/css" rel="stylesheet" href="bootstrap/css/jquery-jvectormap-1.2.2.css">
+    <!-- Daterange picker -->
+    <link media="all" type="text/css" rel="stylesheet" href="bootstrap/css/daterangepicker-bs3.css">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link media="all" type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap3-wysihtml5.min.css">
+    <!-- Theme style -->
+    <link media="all" type="text/css" rel="stylesheet" href="bootstrap/css/AdminLTE.css">
+    <link media="all" type="text/css" rel="stylesheet" href="bootstrap/css/select2.min.css">
+    <link media="all" type="text/css" rel="stylesheet" href="bootstrap/css/style.css">
+    <script src="bootstrap/js/jquery-2.2.4.js"></script>
+    <!-- Acciones sobre los botones - Carga las vistas dentro de un solo DIV sin necesidad de cargar toda la vista -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#home").click(function(event) {
+            $("#content-all").load('SelectSession.html');
+        });
+    });
+
+    $(document).ready(function() {
+        $("#home2").click(function(event) {
+            $("#content-all").load('SelectSession.html');
+        });
+    });
+
+    function next() {
+        $("#content-all").load('ActionsSession.html');
+    }
+
+    function showCreateSession() {
+    	$("#content-actions").load('CreateSession.html');
+    }
+
+ 	function showSeeSession() {
+    	$("#content-actions").load('Sessions.html');
+    }
+
+    $(document).ready(function() {
+        $("#report").click(function(event) {
+            $("#content-all").load('Reports.html');
+        });
+    });
+    </script>
+</head>
+
+<body class="skin-blue">
+    <header class="header">
+        <a href="#" id="home" class="logo">
+            <!-- Add the class icon to your logo image or logo icon to add the margining -->
+            <img alt="UNIAJC" src="img/logo_uniajc_azul.png" style="width:100px">
+        </a>
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span>Nombre docente <i class="caret"></i></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header bg-light-blue">
+                                <img src="img/avatar-docente.png" class="img-circle" alt="User Image" />
+                                <p>
+                                    Nombre docente
+                                </p>
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- /header -->
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="left-side sidebar-offcanvas">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                 	<li>
+                        <a href="#" id="home2">
+                            <i class="fa fa-home"></i> <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="report">
+                            <i class="fa fa-file-pdf-o"></i> <span>Reportes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-envelope-o"></i> <span>Notificaciones</span>
+                        </a>
+                    </li>
+               	</ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Right side column. Contains the navbar and content of the page -->
+        <aside class="right-side" id="content-all">
+            <!-- Content Header (Page header) -->
+            <section class="content">
+                <div class="box box-info">
+                    <div class="box-body">
+                        <h1>Pre registro</h1>
+                        <p>Esta sección contiene todos los grupos en los cuales usted da clase</p>
+                        <!-- will be used to show any messages -->
+                        <br>
+                        <br>
+                        <div class="panel panel-default">
+                            
+                            <!-- Table -->
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>SEDE</th>
+                                            <th>GRUPO</th>
+                                            <th>MATERIA</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>111</td>
+                                            <td>Matematicas</td>
+                                            <td>
+                                                <a class="btn btn-small btn-success fa fa-share" id="session" onclick="next()"> Ir</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>222</td>
+                                            <td>Electronica 1</td>
+                                            <td>
+                                                <a class="btn btn-small btn-success fa fa-share" id="session" onclick="next()"> Ir</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>333</td>
+                                            <td>Principios de Economía</td>
+                                            <td>
+                                                <a class="btn btn-small btn-success fa fa-share" id="session" onclick="next()"> Ir</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </section>
+        </aside>
+    </div>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/raphael-min.js"></script>
+    <script src="bootstrap/js/morris.min.js"></script>
+    <script src="bootstrap/js/jquery.sparkline.min.js"></script>
+    <script src="bootstrap/js/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="bootstrap/js/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="bootstrap/js/daterangepicker.js"></script>
+    <script src="bootstrap/js/bootstrap3-wysihtml5.all.min.js"></script>
+    <script src="bootstrap/js/icheck.min.js"></script>
+    <script src="bootstrap/js/app.js"></script>
+</body>
+
+</html>
