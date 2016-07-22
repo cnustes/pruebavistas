@@ -1,0 +1,48 @@
+<section class="content">
+    <div class="box box-info">
+        <div class="box-body">
+            <h1>Reporte manual</h1>
+            <br>
+            <p>Seleccione el rango de fechas en el que desea generar el reporte</p>
+            <br>
+            <br>
+            <div class="row">
+            	<div id="alert-report" class="alert alert-success fa fa-check col-xs-10 hide" role="alert"> 
+            		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Reporte generado con <strong>Éxito!</strong>
+        		</div>
+            </div>
+            <div class="form-group">
+                <label for="select-docent">Seleccione un docente:</label>
+                <select class="form-control" id="select-docent">
+                    <option>Docente 1</option>
+                    <option>Docente 2</option>
+                    <option>Docente 3</option>
+                    <option>Docente 4</option>
+                    <option>Docente 5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="select-asignature">Seleccione una materia:</label>
+                <select class="form-control" id="select-asignature">
+                    <option>Asignatura 1</option>
+                    <option>Asignatura 2</option>
+                    <option>Asignatura 3</option>
+                    <option>Asignatura 4</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="date-range1">Fecha inicial: </label>
+                    <input type="date" name="" value="" placeholder="" id="date-range1">
+                </div>
+                <div class="col-sm-6">
+                    <label for="date-range2">Fecha final: </label>
+                    <input type="date" name="" value="" placeholder="" id="date-range2">
+                </div>
+            </div>
+            <br>
+            <br>
+            <a class="btn btn-large btn-success fa fa-file-pdf-o" id="send-report" onclick="generateReport()"> Generar reporte</a>
+        </div>
+    </div>
+</section>

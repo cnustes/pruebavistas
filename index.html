@@ -27,41 +27,47 @@
     <script src="bootstrap/js/jquery-2.2.4.js"></script>
     <!-- Acciones sobre los botones - Carga las vistas dentro de un solo DIV sin necesidad de cargar toda la vista -->
     <script type="text/javascript">
-    $(document).ready(function() {
-        $("#home").click(function(event) {
-            $("#content-all").load('SelectSession.html');
-        });
-    });
-
-    $(document).ready(function() {
-        $("#home2").click(function(event) {
-            $("#content-all").load('SelectSession.html');
-        });
-    });
+    function goHome() {
+        $("#content-all").load('SelectSession.html');
+    }
 
     function next() {
         $("#content-all").load('ActionsSession.html');
     }
 
     function showCreateSession() {
+        $("#content-actions").load('CreateSession.html');
+    }
+
+    function showSeeSession() {
+        $("#content-actions").load('Sessions.html');
+    }
+
+    function goReports() {
+        $("#content-all").load('Reports.html');
+    }
+
+    function goManualReport() {
+        $("#content-report").load('ManualReport.html');
+    }
+
+    function editSession() {
     	$("#content-actions").load('CreateSession.html');
     }
 
- 	function showSeeSession() {
-    	$("#content-actions").load('Sessions.html');
+    function generateReport() {
+        debugger
+        $("#alert-report").removeClass('hide');
+        setTimeout(function() {
+            $("#alert-report").addClass('hide');
+        }, 3000);
     }
-
-    $(document).ready(function() {
-        $("#report").click(function(event) {
-            $("#content-all").load('Reports.html');
-        });
-    });
     </script>
 </head>
 
 <body class="skin-blue">
     <header class="header">
-        <a href="#" id="home" class="logo">
+        <a href="#" onclick="goHome()" class="logo">
             <!-- Add the class icon to your logo image or logo icon to add the margining -->
             <img alt="UNIAJC" src="img/logo_uniajc_azul.png" style="width:100px">
         </a>
@@ -112,13 +118,13 @@
             <section class="sidebar">
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu">
-                 	<li>
-                        <a href="#" id="home2">
+                    <li>
+                        <a href="#" onclick="goHome()">
                             <i class="fa fa-home"></i> <span>Inicio</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" id="report">
+                        <a href="#" onclick="goReports()">
                             <i class="fa fa-file-pdf-o"></i> <span>Reportes</span>
                         </a>
                     </li>

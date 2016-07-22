@@ -1,53 +1,68 @@
 <section class="content">
     <div class="box box-info">
         <div class="box-body">
-        	<h1>Crear sesión</h1><br>
-        	<p>Aquí deberá diligenciar todos los campos necesarios para la creción de una sesión</p><br>
-        	<div class="row">
-                <div class="col-md-6">                    
-                	<span class="label label-primary">Facultad</span>
-                    <label>Facultad</label>                  	
+            <h1>Crear sesión</h1>
+            <br>
+            <p>Aquí deberá diligenciar todos los campos necesarios para la creción de una sesión</p>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="label label-primary">Facultad</span>
+                    <label>Facultad</label>
                 </div>
                 <div class="col-md-6">
-                	<span class="label label-primary">Docente</span>
+                    <span class="label label-primary">Docente</span>
                     <label>Docente</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <span class="label label-primary">Materia</span>
-                    <label>Materia</label>                    
+                    <label>Materia</label>
                 </div>
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-4">
-                        	<span class="label label-primary">Periodo</span>
-                            <label>Periodo</label>                            
-                  		</div>
-						<div class="col-md-4">
-							<span class="label label-primary">Grupo</span>
-							<label>Grupo</label>                     
-						</div>
-						<div class="col-md-4">
-							<span class="label label-primary">Día</span>
-							<label>Día</label>                     
-						</div>
-               		</div>
-            	</div><br><br><br>
+                            <span class="label label-primary">Periodo</span>
+                            <label>Periodo</label>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="label label-primary">Grupo</span>
+                            <label>Grupo</label>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="label label-primary">Día</span>
+                            <label>Día</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
             </div>
-
-         	<div class="row">
-            	<div class="col-xs-12">            		
-				    <div class="form-group">
-						<span class="label label-primary">Observaciones</span><br><br>
-						<textarea class="form-control" rows="5" id="comment"></textarea>
-					</div>	
-			    </div>
+            <div class="form-group">
+                <label for="select-tema">Seleccione el tema a dictar:</label>
+                <select class="form-control" id="select-tema">
+                    <option>Tema 1</option>
+                    <option>Tema 2</option>
+                    <option>Tema 3</option>
+                    <option>Tema 4</option>
+                    <option>Tema 5</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <span class="label label-primary">Observaciones</span>
+                        <br>
+                        <br>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                    </div>
+                </div>
             </div>
             <div class="form_group">
-            	<a class="btn btn-large btn-success fa fa-floppy-o" id="session" onclick="showSeeSession()"> Guardar</a>
+                <a class="btn btn-large btn-success fa fa-floppy-o" id="session" onclick="showSeeSession()"> Guardar</a>
             </div>
-
-		</div>
+        </div>
     </div>
 </section>
